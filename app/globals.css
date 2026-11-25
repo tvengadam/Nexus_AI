@@ -127,4 +127,10 @@
   html {
     @apply font-sans;
   }
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-fade-in { animation: fadeIn 200ms ease-out; }
+    .animate-slide-up { animation: slideUp 220ms ease-out; }
+  }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 }
